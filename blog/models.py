@@ -41,3 +41,20 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
 
+
+class Report(models.Model):
+    reported_post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="reports")
+    reporter_name = models.CharField(max_length=80)
+    reporter_email = models.EmailField()
+    report_reason = models.TextField()
+    report_date = models.DateTimeField(auto_now_add=True)
+    is_resolved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-report_date']
+
+    def __str__(self):
+        return f"Report on post '{self.reported_post.title}' by {self.reporter_name}"
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)

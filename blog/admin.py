@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, Report
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -23,3 +23,14 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+
+@admin.register(Report)
+class ReportAdmin(admin.ModelAdmin):
+    list_display = ('reported_post', 'reporter_name', 'report_date', 'is_resolved')
+    list_filter = ('is_resolved', 'report_date')
+    search_fields = ('reporter_name', 'report_reason', 'reported_post__post_title')
+    actions = ['mark_resolved']
+
+    def mark_resolved(self, request, queryset):
+        queryset.update(is_resolved=True)
