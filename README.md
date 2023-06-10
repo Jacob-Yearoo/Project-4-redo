@@ -24,9 +24,9 @@ The Value that visitors will get from this site are:
 
 ## Demo
 
-[App page](https://dashboard.heroku.com/apps/computer-jargon)
+[App page](https://dashboard.heroku.com/apps/project-4-redo)
 
-[Live Demo](https://computer-jargon.herokuapp.com/)
+[Live Demo](https://project-4-redo.herokuapp.com/)
 
 ## User Experience
 
@@ -103,6 +103,8 @@ the colour scheme, I opted for a dark mode to add to that modernist feeling, the
 6. As a User i would like to register an account so I can leave comments
 
 7. As an Admin I need to be able to use CRUD on the site
+
+8. As a User I would like to report blogs for various reasons.
 
 ## Testing
 
