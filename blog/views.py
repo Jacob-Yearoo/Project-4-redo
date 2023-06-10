@@ -86,7 +86,7 @@ class PostLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-        
+
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
@@ -115,4 +115,3 @@ def report_post(request, slug):
     else:
         form = ReportForm()
     return render(request, 'report.html', {'form': form})
-    

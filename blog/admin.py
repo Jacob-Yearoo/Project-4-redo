@@ -27,9 +27,10 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(Report)
 class ReportAdmin(admin.ModelAdmin):
-    list_display = ('reported_post', 'reporter_name', 'report_date', 'is_resolved')
+    list_display = ('reported_post', 'reporter_name', 'report_date',
+                    'is_resolved')
     list_filter = ('is_resolved', 'report_date')
-    search_fields = ('reporter_name', 'report_reason', 'reported_post__post_title')
+    search_fields = ('reporter_name', 'report_reason', 'reported_post_title')
     actions = ['mark_resolved']
 
     def mark_resolved(self, request, queryset):

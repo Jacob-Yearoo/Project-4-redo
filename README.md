@@ -1,108 +1,168 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Jacob-Yearoo,
+# Computer Jargon | Blog Site
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Project four
 
-## Gitpod Reminders
+This is a website I made, that will act as a portfolio of my work as the number of projects I work on increase, I'm hoping that it will act as a good reference point for employers to make an accurate estimate of my ability. the website itself is a Blog site focusing on different topics surrounding Technology.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+It aims to be a site where people who are invested in computer/technology and more specifically gaming, on the PC platform, can come together to read about topics that interest them and engage with a community by liking posts and leaving comments.
 
-`python3 -m http.server`
+The Value that the site owner will get out of this website are:
 
-A blue button should appear to click: _Make Public_,
+- Build the business's brand.
+- Have a platform that is fluid and can be updated and added to.
+- The inverse is also possible the site admin can also remove posts or comments for various reason if they need to.
+- It's a platform that can be used to generate revenue through advertisments.
 
-Another blue button should appear to click: _Open Browser_.
+The Value that visitors will get from this site are:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- A fun site to delve into different topics about a subject that interests them.
+- A way to look into other projects or work I have done through links to social accounts
+- An opportunity to voice their opinion about a certain topic and discuss with other likeminded individuals.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Demo
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[App page](https://dashboard.heroku.com/apps/computer-jargon)
 
-To log into the Heroku toolbelt CLI:
+[Live Demo](https://computer-jargon.herokuapp.com/)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## User Experience
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### The Strategy
+As the site owner the goal was to create a modern and aesthetically pleasing site, in order to increase site traffic, which could eventually generate income through ad revenue.
 
-------
+### The Scope
+The idea was to make each individual blog post pop, so the page had to be minimalist with an emphasis on the blogs themselves to really make them stand out, also added, would be login functionality to try and retain the visitors that find themselves on the page
 
-## Release History
+### The Structure
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+As above, I wanted the blog posts to pop, the featured images in the front page are very eye catching and desgined to draw people in, the small heading of the page and navbar are desinbged to be as unintrusive as possible to people's experience.  
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### The Skeleton
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+[Main Structure Wireframe](https://i.imgur.com/ftW8kHq.jpg)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+[Content Wireframe](https://i.imgur.com/PHeYW2L.jpg)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+[User Registration Wireframe](https://i.imgur.com/z6WnwPn.jpg)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### The Surface
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+the colour scheme, I opted for a dark mode to add to that modernist feeling, the dark background contrasts well with the blog images, and the orange used in the logo stands out because of the background colour. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- All pages feature a fixed footer that responds to screen size and allows for easy access to different social links. 
+- At the top of the page there is a Nav bar that can be used to access the home page or "sign in"/"sign up" which then changes to "Logout" once you are signed in.
+- A fully featured admin panel, which when accessed can be used to give admin privileges to other users, make new posts, delete posts, approve comments, delete comments, delete users.
+- a like and comment counter that automatically increases when a post is liked or has received a comment
+- the ability to make your own profile which then gives you additional features such as the ability to comment, the information inputted is stored directly into a database
+- the ability to report a post (while you're logged in) which an admin can examine.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Features I'd Like to Implement
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- I would like to add a search bar to the site to make it more user-friendly and intuitive to find certain blogs.
+- the ability for certain users to make their own posts rather than just through the admin page.
+- additional options in the navbar to sort through categories, which each post could be sorted into automatically via tags.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Tech
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+**HTML:** Used to input all of the content on index.html and contact.html.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+**CSS:** Used to style all of the content.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Google Fonts:** Supplied the fonts.
 
-------
+**Unsplash:** For the blog images used.
 
-## FAQ about the uptime script
+**Font Awesome:** Used for the social media icons in the footer.
 
-**Why have you added this script?**
+**Django:** Supplied the whole framework
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+**Bootstrap:** was used to style the pages and add responsiveness to different screen sizes.
 
-**How will this affect me?**
+**Cloudinary:** hosted the images that the site user.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+**ElephantSQL:** the DBMS that stores the registration details, etc.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## User Stories
 
-**So….?**
+1. As a Site User I can like or unlike posts.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+2. As a User I can view a list of posts so I can select one to read through.
 
-**Can I opt out?**
+3. As a User I can see how many likes and comments are on a certain post.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+4. As a User or Admin I can view comments on a post to engage, and also leave comments to get involved.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+5. As a User I would like to read the whole post after clicking on the post.
 
-**Anything more?**
+6. As a User i would like to register an account so I can leave comments
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+7. As an Admin I need to be able to use CRUD on the site
 
----
+## Testing
 
-Happy coding!
+![Testing](https://i.imgur.com/xhCrLhj.png)
+
+The site was tested on Chrome, Firefox, Edge and Safari to ensure the desired outcome no matter where it is being viewed from, I also adjusted the site to remain readable on different screen sizes (going from my 5120px wide screen, to regular full HD screens, to tablets and finally to phones with the Iphone 5 being the lowest size I made adjustments for)
+
+## Planning
+
+[Agile Planning](https://github.com/users/Jacob-Yearoo/projects/1/views/1)
+
+I used Githubs built-in projects feature to plan beforehand, what user stories I would need to complete in order to build a site/app that would meet the basic needs of a blog.
+
+## Usage
+
+### As A Viewer
+1. open the app on Heroku and browse the contents of the page
+2. if the user wishes to leave likes and comments then they should register with a Username and Password (Email address is not necessary)
+
+### As An Admin
+1. open the app on Heroku
+2. at the end of the URL add '/admin'
+3. login with the admin credentials provided
+4. you will then be able to add posts, delete posts, add/remove user permissions, approve/deny comments, etc.
+
+## Deployment
+
+his site is hosted using Heroku, To set up Heroku you must;
+
+
+The requirements.txt file in the IDE must be updated to package all dependencies. To do this:
+
+1. Enter the following into the terminal: 'pip3 freeze > requirements.txt'
+2. Commit the changes and push to GitHub
+3. Next, follow the steps below:
+4. Login to Heroku, create an account if necessary
+5. Once at your Dashboard, click 'Create New App'
+6. Enter a name for your application, this must be unique, and select a region
+7. Click 'Create App'
+8. At the Application Configuration page, apply the following to the Settings and Deploy sections:
+9. add the necessary CONFIG VARS that are relevant to your project
+10. Click 'Add'
+11. Add another Config Var with the Key of 'PORT' and the Value of '8000'
+12. Navigate to the Deploy section, select Github as the deployment method, and connect to GitHub when prompted
+13. Use your GitHub repository name created for this project
+14. Finally, scroll down to and select to deploy 'Automatically' as this will ensure each time you push code in GitHub, the pages through Heroku are updated
+15. Your application can be run from the Application Configuration section, click 'Open App'
+
+
+## GitPod Commits
+
+The deployed site will update automatically upon new commits to the master branch. In order for the site to deploy correctly on GitHub pages, the landing page must be named index.html.
+## Credits
+
+### Media
+All Images have come from [Unsplash](https://unsplash.com/)
+
+### Acknowledgements
+I would like to credit [RickofManc](https://github.com/RickofManc/vv-pizzas) for his excellent README, I have used his instructions for deployment on Heroku.
+
+This project was heavily inspired by the walkthrough project at Code institute as it aligned with what I wanted my project to be based on.  [this is a link to the source code.](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/01_creating_the_project) the overall layout of my project was inspired by this program.
+
+Special thanks to the Tutors at Code Institute for the support they've given.

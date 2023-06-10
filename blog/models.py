@@ -8,7 +8,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name="blog_posts")
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
@@ -28,7 +29,8 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,
+                             related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -43,7 +45,8 @@ class Comment(models.Model):
 
 
 class Report(models.Model):
-    reported_post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="reports")
+    reported_post = models.ForeignKey(Post, on_delete=models.CASCADE,
+                                      related_name="reports")
     reporter_name = models.CharField(max_length=80)
     reporter_email = models.EmailField()
     report_reason = models.TextField()
@@ -54,7 +57,8 @@ class Report(models.Model):
         ordering = ['-report_date']
 
     def __str__(self):
-        return f"Report on post '{self.reported_post.title}' by {self.reporter_name}"
+        return f"Report on post '{self.reported_post.title}' by \
+          {self.reporter_name}"
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
