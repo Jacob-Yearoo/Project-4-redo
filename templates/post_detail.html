@@ -3,6 +3,27 @@
 
 {% load crispy_forms_tags %}
 
+
+<style>
+    .comment-card {
+        margin-bottom: 10px;
+    }
+
+    .comment-body {
+        text-align: left;
+    }
+
+    .comment-meta {
+        font-size: 14px;
+        color: #6c757d;
+    }
+
+    .comment-text {
+        margin-top: 10px;
+    }
+</style>
+
+
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -67,16 +88,18 @@
             <hr>
         </div>
     </div>
+    <div class="container">
     <div class="row">
         <div class="col-md-8 card mb-4 mt-3">
             <h3>Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class="text-muted font-weight-normal">{{ comment.created_on }}</span> wrote:
-                    </p>
+                <div class="card comment-card" style="padding: 10px;">
+                    <div class="card-body>
+                        <p class="font-weight-bold">
+                            {{ comment.name }}
+                            <span class="text-muted font-weight-normal">{{ comment.created_on }}</span> wrote:
+                        </p>
                     {{ comment.body | linebreaks }}
                 
                     {% if user.is_authenticated and comment.name == user.username %}
@@ -85,11 +108,13 @@
                             <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-danger btn-sm">Delete</a>
                         </div>
                     {% endif %}
+                    </div>
                 </div>
                 </div>
                 </div>
                 {% endfor %}
             </div>
+        </div>
         </div>
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
