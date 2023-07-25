@@ -132,11 +132,22 @@ def update_comment(request, pk):
     return render(request, 'update_comment.html', {'form': form, 'comment': comment})
 
 
+# def delete_comment(request, pk):
+#     comment = get_object_or_404(Comment, pk=pk)
+
+#     if request.method == 'POST':
+#         comment.delete()
+#         return redirect('index', slug=comment.post.slug)
+
+#     return render(request, 'delete_comment.html', {'comment': comment})
+
 def delete_comment(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
+    post_slug = comment.post.slug 
 
     if request.method == 'POST':
         comment.delete()
-        return redirect('index', slug=comment.post.slug)
+        return redirect('index') 
 
     return render(request, 'delete_comment.html', {'comment': comment})
+

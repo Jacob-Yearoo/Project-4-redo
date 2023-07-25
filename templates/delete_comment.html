@@ -1,5 +1,38 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<style>
+    body {
+        color: white;
+        text-align: center;
+    }
+
+    .content {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+</style>
     <h2>Delete Comment</h2>
     <p>Are you sure you want to delete this comment?</p>
     <form method="post">
