@@ -60,6 +60,8 @@ the colour scheme, I opted for a dark mode to add to that modernist feeling, the
 - a like and comment counter that automatically increases when a post is liked or has received a comment
 - the ability to make your own profile which then gives you additional features such as the ability to comment, the information inputted is stored directly into a database
 - the ability to report a post (while you're logged in) which an admin can examine.
+- the ability to update your comment once it has been approved
+- the ability to delete only your own comments.
 
 ## Features I'd Like to Implement
 
