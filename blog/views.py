@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, Report
+from .models import Post, Report, Comment
 from .forms import CommentForm, ReportForm
 
 
@@ -13,6 +13,7 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -115,3 +116,27 @@ def report_post(request, slug):
     else:
         form = ReportForm()
     return render(request, 'report.html', {'form': form})
+
+def update_comment(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('post_detail', slug=comment.post.slug)
+
+    else:
+        form = CommentForm(instance=comment)
+
+    return render(request, 'update_comment.html', {'form': form, 'comment': comment})
+
+
+def delete_comment(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('index', slug=comment.post.slug)
+
+    return render(request, 'delete_comment.html', {'comment': comment})
